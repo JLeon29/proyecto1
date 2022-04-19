@@ -1,0 +1,48 @@
+package com.nttdata.microservicios.model;
+
+import java.io.Serializable;
+
+import javax.annotation.Generated;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+
+@Data
+@Builder
+@Getter
+@Setter
+@AllArgsConstructor
+@Document(collection = "customers")
+public class Customer implements Serializable {
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 5505811462956401343L;
+	
+	@Id
+	private Integer id;
+	private String nombres;
+	private String apellido_paterno;
+	private String apellido_materno;
+	private String dni;
+	private String correo;
+	
+	
+	
+
+
+	
+	
+	
+	
+	
+	
+
+}

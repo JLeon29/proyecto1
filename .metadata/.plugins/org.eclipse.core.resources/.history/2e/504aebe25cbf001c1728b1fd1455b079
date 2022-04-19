@@ -1,0 +1,109 @@
+package com.nttdata.microservicios.model;
+
+import java.io.Serializable;
+
+import javax.annotation.Generated;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document
+public class Customer implements Serializable {
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 5505811462956401343L;
+	
+	@Id
+	private Integer id;
+	
+	private String nombres;
+	private String apellido_paterno;
+	private String apellido_materno;
+	private String dni;
+	private String correo;
+	
+	
+	public Customer(Integer id, String nombres, String apellido_paterno, String apellido_materno, String dni,
+			String correo) {
+		super();
+		this.id = id;
+		this.nombres = nombres;
+		this.apellido_paterno = apellido_paterno;
+		this.apellido_materno = apellido_materno;
+		this.dni = dni;
+		this.correo = correo;
+	}
+
+
+	public Customer() {
+		super();
+	}
+
+
+	public Integer getId() {
+		return id;
+	}
+
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+
+	public String getNombres() {
+		return nombres;
+	}
+
+
+	public void setNombres(String nombres) {
+		this.nombres = nombres;
+	}
+
+
+	public String getApellido_paterno() {
+		return apellido_paterno;
+	}
+
+
+	public void setApellido_paterno(String apellido_paterno) {
+		this.apellido_paterno = apellido_paterno;
+	}
+
+
+	public String getApellido_materno() {
+		return apellido_materno;
+	}
+
+
+	public void setApellido_materno(String apellido_materno) {
+		this.apellido_materno = apellido_materno;
+	}
+
+
+	public String getDni() {
+		return dni;
+	}
+
+
+	public void setDni(String dni) {
+		this.dni = dni;
+	}
+
+
+	public String getCorreo() {
+		return correo;
+	}
+
+
+	public void setCorreo(String correo) {
+		this.correo = correo;
+	}
+	
+	
+	
+	
+	
+
+}

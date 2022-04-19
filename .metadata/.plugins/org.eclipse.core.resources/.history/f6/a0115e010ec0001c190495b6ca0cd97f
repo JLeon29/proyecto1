@@ -1,0 +1,5 @@
+package com.tiypecustomer.repository;
+
+public interface TypeCustomerRepository {
+
+}

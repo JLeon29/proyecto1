@@ -1,0 +1,41 @@
+package com.nttdata.microservicios.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.nttdata.microservicios.model.Customer;
+
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
+
+@Service
+public class CustomerServiceImpl implements ICustomerService {
+	
+	@Autowired
+	private ICustomerService service;
+
+	@Override
+	public Flux<Customer> findAll() {
+		return service.findAll();
+	
+	}
+
+	@Override
+	public Mono<Customer> findById(String id) {
+		
+		return service.findById(id);
+	}
+
+	@Override
+	public Mono<Customer> save(Customer cliente) {
+	
+		return service.save(cliente);
+	}
+
+	@Override
+	public Mono<Void> delete(Customer cliente) {
+		
+		return service.delete(cliente);
+	}
+
+}

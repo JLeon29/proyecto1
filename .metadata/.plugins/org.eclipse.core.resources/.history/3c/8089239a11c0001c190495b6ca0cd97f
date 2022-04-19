@@ -1,0 +1,15 @@
+package com.nttdata.microservicios.feignclients;
+
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@FeignClient(name = "typecustomer-service", url = "http://localhost:8002")
+@RequestMapping("/api/typecustomer")
+public interface TypeCustomerFeignClient {
+	
+	
+	Flux<>
+	
+	
+
+}

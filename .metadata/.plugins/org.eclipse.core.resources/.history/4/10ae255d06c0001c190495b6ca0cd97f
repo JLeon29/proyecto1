@@ -1,0 +1,14 @@
+package com.nttdata.microservicios.controller;
+
+import org.springframework.data.mongodb.core.mapping.Document;
+
+import lombok.Data;
+
+@Data
+@Document(collection = "typeCustomer")
+public class TypeCustomer {
+	
+	private String nombre;
+	private String descripcion;
+
+}

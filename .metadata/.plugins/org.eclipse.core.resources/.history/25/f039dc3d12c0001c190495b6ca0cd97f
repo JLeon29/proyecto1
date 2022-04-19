@@ -1,0 +1,13 @@
+package com.nttdata.microservicios.model;
+
+import lombok.Data;
+
+@Data
+public class TypeCustomer {
+	
+	private Long id;
+	private String nombre;
+	private Integer numero;
+	
+
+}
