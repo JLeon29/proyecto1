@@ -8,9 +8,8 @@ import lombok.Data;
 @Document(collection = "typecustomer")
 public class TypeCustomer {
 	
-	private Long id;
+	private Customer customer;
 	private String nombre;
-	private Integer numero;
-	private Long customerId;
+	
 
 }

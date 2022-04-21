@@ -1,35 +1,27 @@
 package com.tiypecustomer.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
+import com.tiypecustomer.feignclient.TypeCustomerFeignClient;
 import com.tiypecustomer.model.TypeCustomer;
-import com.tiypecustomer.repository.TypeCustomerRepository;
 
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
-@Service
-public class TypeCustomerImpl implements ITypeCustomerService {
+public class TypeCustomerFeignClientService implements ITypeCustomerService {
+	
 	
 	@Autowired
-	private TypeCustomerRepository repository;
+	private TypeCustomerFeignClient client;
 
 	@Override
 	public Flux<TypeCustomer> findAll() {
-		// TODO Auto-generated method stub
-		return null;
+		return client.findAll().toStream().map(c -> new TypeCustomer(c,""));
 	}
 
 	@Override
 	public Mono<TypeCustomer> findById(Long id) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
-	
-
-	
-
-	
 }
